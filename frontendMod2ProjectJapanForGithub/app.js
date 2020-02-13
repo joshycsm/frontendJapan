@@ -5,20 +5,20 @@ const placeSelectElement = document.querySelector(".place-select");
 const place2ndSelectElement = document.querySelector(".place-2nd-select");
 const userSelectElement = document.querySelector(".user-select");
 const reviewList = document.querySelector(".review-list");
-const searchParams = new URLSearchParams(location.search);
-const query = searchParams.get("id");
+// const searchParams = new URLSearchParams(location.search);
+// const query = searchParams.get("id");
 
 fetch(review_url)
   .then(response => response.json())
   .then(reviewsArray => {
     reviewsArray.map(reviewObject => {
-      // console.log(reviewObject);
+      console.log(reviewObject);
       let place = document.createElement("h3");
       place.innerHTML = `Review: <a href='place.html?id=${reviewObject.place.id}'>${reviewObject.place.name}</a>`;
       let description = document.createElement("p");
       description.dataset.id = reviewObject.id;
       description.dataset.name = reviewObject.description;
-      console.log(description.dataset.name);
+      // console.log(description.dataset.name);
       let rating = document.createElement("p");
       rating.dataset.id = reviewObject.id;
       rating.dataset.name = reviewObject.rating;
@@ -29,14 +29,14 @@ fetch(review_url)
       updateForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
       updateForm.method = "POST";
       updateForm.innerHTML = `
-            <input type="text" placeholder="Description" name="description" value=${description.dataset.name} />
-            <input type="number" placeholder="Rating" name="rating" value=${rating.dataset.name} />
-            <input type="submit" value="Update this rating" />
+            <input type="text" placeholder="Description" name="description" value="${description.dataset.name}" />
+            <input type="number" placeholder="Rating" name="rating" value="${rating.dataset.name}" />
+            <input type="submit" value="Update this review" />
             <input type="hidden" name="_method" value="put" />
         `;
       reviewList.append(updateForm);
 
-      const deleteForm = document.createElement("deleteForm");
+      const deleteForm = document.createElement("form");
       deleteForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
       deleteForm.method = "POST";
       deleteForm.innerHTML = `

@@ -2,10 +2,18 @@
 
 * {
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+label {
+  display: none;
 }
 
 body {
   background-color: rgb(193, 208, 208);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: left;
 }
 
 .price-range,
@@ -15,5 +23,20 @@ body {
 }
 
 form {
+  /* display: block; */
+  width: 20rem;
+}
+
+input {
+  width: 100%;
   display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+select {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
 }
