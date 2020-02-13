@@ -12,15 +12,38 @@ fetch(review_url)
   .then(response => response.json())
   .then(reviewsArray => {
     reviewsArray.map(reviewObject => {
-      console.log(reviewObject);
+      // console.log(reviewObject);
       let place = document.createElement("h3");
       place.innerHTML = `Review: <a href='place.html?id=${reviewObject.place.id}'>${reviewObject.place.name}</a>`;
-      let review = document.createElement("p");
-      review.textContent = `${reviewObject.description} Rating: ${reviewObject.rating}`;
-      reviewList.append(place, review);
-      //   let optionElementForLocationDropdown = document.createElement("option");
-      //   optionElementForLocationDropdown.textContent = reviewObject.place.name;
-      //   placeSelectElement.appendChild(optionElementForLocationDropdown);
+      let description = document.createElement("p");
+      description.dataset.id = reviewObject.id;
+      description.dataset.name = reviewObject.description;
+      console.log(description.dataset.name);
+      let rating = document.createElement("p");
+      rating.dataset.id = reviewObject.id;
+      rating.dataset.name = reviewObject.rating;
+      rating.textContent = `${reviewObject.description} Rating: ${reviewObject.rating}`;
+      reviewList.append(place, rating);
+
+      const updateForm = document.createElement("form");
+      updateForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
+      updateForm.method = "POST";
+      updateForm.innerHTML = `
+            <input type="text" placeholder="Description" name="description" value=${description.dataset.name} />
+            <input type="number" placeholder="Rating" name="rating" value=${rating.dataset.name} />
+            <input type="submit" value="Update this rating" />
+            <input type="hidden" name="_method" value="put" />
+        `;
+      reviewList.append(updateForm);
+
+      const deleteForm = document.createElement("deleteForm");
+      deleteForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
+      deleteForm.method = "POST";
+      deleteForm.innerHTML = `
+            <input type="submit" value="Delete this review" />
+            <input type="hidden" name="_method" value="delete" />
+        `;
+      reviewList.append(deleteForm);
     });
   });
 
