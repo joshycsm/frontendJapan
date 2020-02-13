@@ -28,61 +28,62 @@
         <a href="category.html?category=attraction">Attraction</a>
       </div>
     </nav>
-    <div class="review-form">
-      <h2>Review Form:</h2>
-      <form action="http://localhost:3000/reviews" method="post">
-        <select class="user-select" name="user">
-          <!-- <option value="1">New User</option> -->
-        </select>
-        <select class="place-select" name="place">
-          <!-- <option value="1">Bar BESO</option> -->
-        </select>
-        <input
-          type="number"
-          name="rating"
-          placeholder="pick 1-5 stars"
-          value="5"
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="your review details"
-        />
-        <input type="submit" value="Submit your review" />
-      </form>
+    <div class="form-container">
+      <div class="review-form">
+        <h2>Review Form:</h2>
+        <form action="http://localhost:3000/reviews" method="post">
+          <select class="user-select" name="user">
+            <!-- <option value="1">New User</option> -->
+          </select>
+          <select class="place-select" name="place">
+            <!-- <option value="1">Bar BESO</option> -->
+          </select>
+          <input
+            type="number"
+            name="rating"
+            placeholder="pick 1-5 stars"
+            value="5"
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="your review details"
+          />
+          <input type="submit" value="Submit your review" />
+        </form>
+      </div>
+      <div class="user-form">
+        <h2>Create User:</h2>
+        <form action="http://localhost:3000/users" method="post">
+          <input type="text" name="name" placeholder="name" />
+          <input type="submit" value="Create user" />
+        </form>
+      </div>
+      <div class="search-form">
+        <h2>Search Form:</h2>
+        <form action="http://localhost:3000/places" method="GET">
+          <select class="place-2nd-select" name="name">
+            <!-- <option value="1">Place ie Bar BESO</option> -->
+          </select>
+          <input
+            type="text"
+            name="category"
+            placeholder="attraction, restaurant, bar?"
+          />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
     </div>
-    <div class="user-form">
-      <h2>Create User:</h2>
-      <form action="http://localhost:3000/users" method="post">
-        <input type="text" name="name" placeholder="name" />
-        <input type="submit" value="Create user" />
-      </form>
-    </div>
-    <div class="search-form">
-      <h2>Search Form:</h2>
-      <form action="http://localhost:3000/places" method="GET">
-        <select class="place-2nd-select" name="name">
-          <!-- <option value="1">Place ie Bar BESO</option> -->
-        </select>
-        <input
-          type="text"
-          name="category"
-          placeholder="attraction, restaurant, bar?"
-        />
-        <input type="submit" value="Search" />
-      </form>
-    </div>
-    <div class="review-list">
-      <h2>Review List:</h2>
-    </div>
+    <h2>Review List:</h2>
+    <div class="review-list"></div>
     <footer>
       <a href="places.html">Places</a>
       <a href="reviews.html">Reviews</a>
     </footer>
-    <img
+    <!-- <img
       src="https://lp-cms-production.imgix.net/2019-06/512d769cd0d5e56c238eb975d2325940-japan.jpeg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4"
       alt="japan travel photo"
-    />
+    /> -->
     <script src="app.js"></script>
   </body>
 </html>
