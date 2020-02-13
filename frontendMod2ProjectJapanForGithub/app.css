@@ -5,6 +5,29 @@
   box-sizing: border-box;
 }
 
+.nav-bar {
+  /* display: flex; */
+}
+
+.review-list {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+.search-form {
+  /* display: none; */
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  /* box-shadow: black; */
+}
+
+div {
+  /* border-style: solid; */
+}
+
 label {
   display: none;
 }
