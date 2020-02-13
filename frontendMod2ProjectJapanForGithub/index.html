@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <h1>Visting Japan</h1>
+    <header>
+      <h1>Visting Japan</h1>
+    </header>
     <nav class="nav-bar">
       <div class="city-filter">
         Search By City: <a href="location.html?location=Tokyo">Tokyo</a>
@@ -46,14 +48,14 @@
           name="description"
           placeholder="your review details"
         />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit your review" />
       </form>
     </div>
     <div class="user-form">
       <h2>Create User:</h2>
       <form action="http://localhost:3000/users" method="post">
         <input type="text" name="name" placeholder="name" />
-        <input type="submit" value="Create" />
+        <input type="submit" value="Create user" />
       </form>
     </div>
     <div class="search-form">
@@ -70,7 +72,9 @@
         <input type="submit" value="Search" />
       </form>
     </div>
-    <div class="review-list"></div>
+    <div class="review-list">
+      <h2>Review List:</h2>
+    </div>
     <footer>
       <a href="places.html">Places</a>
       <a href="reviews.html">Reviews</a>
