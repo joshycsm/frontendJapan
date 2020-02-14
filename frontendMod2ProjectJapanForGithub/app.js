@@ -24,7 +24,7 @@ fetch(review_url)
       let rating = document.createElement("p");
       rating.dataset.id = reviewObject.id;
       rating.dataset.name = reviewObject.rating;
-      rating.textContent = `${reviewObject.description} Rating: ${reviewObject.rating}`;
+      rating.textContent = `${reviewObject.description} Rating: ${reviewObject.rating} (review left by ${reviewObject.user.name})`;
       document.body.append(individualReview);
       // reviewList.append(place, rating);
 

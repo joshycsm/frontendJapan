@@ -9,9 +9,9 @@ fetch(place_url)
       let categoryName = document.createElement("li");
       let priceName = document.createElement("li");
       let locationName = document.createElement("li");
-      locationName.textContent = place.location;
-      priceName.textContent = place.price;
-      categoryName.textContent = place.category;
+      locationName.textContent = `Location - ${place.location}`;
+      priceName.textContent = `Price index - ${place.price}`;
+      categoryName.textContent = `Category - ${place.category}`;
       placeDescription.textContent = place.description;
       placeName.textContent = place.name;
       document.body.append(

@@ -8,7 +8,7 @@ fetch(review_url)
       let place = document.createElement("h3");
       place.innerHTML = `Review: <a href='place.html?id=${review.place.id}'>${review.place.name}</a>`;
       let rating = document.createElement("p");
-      rating.textContent = `${review.description} Rating: ${review.rating}`;
+      rating.textContent = `${review.description} Rating: ${review.rating} (review left by ${review.user.name})`;
       document.body.append(place, rating);
     });
   });
