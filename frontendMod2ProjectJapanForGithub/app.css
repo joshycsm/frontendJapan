@@ -5,22 +5,33 @@
   box-sizing: border-box;
 }
 
+header {
+  text-align: left;
+}
+
+.individual-review {
+  /* display: none; */
+}
+
 .nav-bar {
   /* display: flex; */
 }
 
 .review-list {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: space-around; */
 }
 
 .search-form {
-  /* display: none; */
+  display: none;
 }
 
 .form-container {
   display: flex;
   justify-content: space-around;
+  flex-flow: wrap;
   /* box-shadow: black; */
 }
 
