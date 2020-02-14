@@ -1,4 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+.header {
+  padding:30px;
+  text-align: center;
+  background: #ff99ff;
+  color: white;
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
+  border-style: outset;
+  border-width: 8px;
+
+}
+.side-bar {
+  padding:12px;
+  font-size: 20px;
+  font-family: 'Kaushan Script', cursive;
+  border-style: outset;
+  border-width: 6px;
+  position:relative;
+}
+h1 {
+  position: center;
+  
+  
+}
+
+img {
+  float: left;
+  left: 5px; 
+
+}
+
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -10,6 +41,7 @@
 }
 
 .review-list {
+  
   /* display: flex; */
   /* flex-wrap: wrap; */
 }
