@@ -29,6 +29,7 @@ fetch(review_url)
       // reviewList.append(place, rating);
 
       const updateForm = document.createElement("form");
+      updateForm.className = "update-form";
       updateForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
       updateForm.method = "POST";
       updateForm.innerHTML = `
@@ -44,6 +45,7 @@ fetch(review_url)
       // });
 
       const deleteForm = document.createElement("form");
+      deleteForm.className = "delete-form";
       deleteForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
       deleteForm.method = "POST";
       deleteForm.innerHTML = `
