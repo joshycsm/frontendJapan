@@ -6,9 +6,10 @@ fetch(`${place_url}${query}`)
   .then(response => response.json())
   .then(placeObject => {
     console.log(placeObject);
-    let locationName = document.createElement("p");
-    locationName.innerHTML = placeObject.name;
-    let locationDescription = document.createElement("p");
-    locationDescription.innerHTML = placeObject.description;
-    document.body.append(locationName, locationDescription);
+    let placeName = document.createElement("p");
+    placeName.innerHTML = placeObject.name;
+    let placeDescription = document.createElement("p");
+    let placePrice = `Price index - ${placeObject.price}`;
+    placeDescription.innerHTML = placeObject.description;
+    document.body.append(placeName, placeDescription, placePrice);
   });

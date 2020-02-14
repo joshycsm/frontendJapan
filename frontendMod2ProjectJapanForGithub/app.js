@@ -13,6 +13,8 @@ fetch(review_url)
   .then(reviewsArray => {
     reviewsArray.map(reviewObject => {
       console.log(reviewObject);
+      let individualReview = document.createElement("div");
+      individualReview.className = "individual-review";
       let place = document.createElement("h3");
       place.innerHTML = `Review: <a href='place.html?id=${reviewObject.place.id}'>${reviewObject.place.name}</a>`;
       let description = document.createElement("p");
@@ -22,8 +24,9 @@ fetch(review_url)
       let rating = document.createElement("p");
       rating.dataset.id = reviewObject.id;
       rating.dataset.name = reviewObject.rating;
-      rating.textContent = `${reviewObject.description} Rating: ${reviewObject.rating}`;
-      reviewList.append(place, rating);
+      rating.textContent = `${reviewObject.description} Rating: ${reviewObject.rating} (review left by ${reviewObject.user.name})`;
+      document.body.append(individualReview);
+      // reviewList.append(place, rating);
 
       const updateForm = document.createElement("form");
       updateForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
@@ -34,7 +37,11 @@ fetch(review_url)
             <input type="submit" value="Update this review" />
             <input type="hidden" name="_method" value="put" />
         `;
-      reviewList.append(updateForm);
+      // reviewList.append(updateForm);
+      // updateReviewInput.addEventListener("click", () => {
+      //   event.target.remove();
+      //   unhideUpdateTextField(updateReviewTextField);
+      // });
 
       const deleteForm = document.createElement("form");
       deleteForm.action = `http://localhost:3000/reviews/${rating.dataset.id}`;
@@ -43,7 +50,8 @@ fetch(review_url)
             <input type="submit" value="Delete this review" />
             <input type="hidden" name="_method" value="delete" />
         `;
-      reviewList.append(deleteForm);
+      individualReview.append(place, rating, updateForm, deleteForm);
+      reviewList.append(individualReview);
     });
   });
 

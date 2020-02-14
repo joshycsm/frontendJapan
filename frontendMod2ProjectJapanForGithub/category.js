@@ -9,8 +9,10 @@ fetch(`http://localhost:3000/places?category=${query}`)
       console.log(place);
       let placeName = document.createElement("h2");
       let placeDescription = document.createElement("p");
+      let placePrice = document.createElement("p");
+      placePrice.textContent = `Price index - ${place.price}`;
       placeName.innerHTML = place.name;
       placeDescription.textContent = place.description;
-      document.body.append(placeName, placeDescription);
+      document.body.append(placeName, placeDescription, placePrice);
     });
   });
