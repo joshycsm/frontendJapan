@@ -30,7 +30,7 @@
     </nav>
     <div class="form-container">
       <div class="review-form">
-        <h2>Review Form:</h2>
+        <h2>Leave a Review!</h2>
         <form action="http://localhost:3000/reviews" method="post">
           <select class="user-select" name="user">
             <!-- <option value="1">New User</option> -->
@@ -42,7 +42,7 @@
             type="number"
             name="rating"
             placeholder="pick 1-5 stars"
-            value="5"
+            value=""
           />
           <input
             type="text"
@@ -53,7 +53,7 @@
         </form>
       </div>
       <div class="user-form">
-        <h2>Create User:</h2>
+        <h2>Create a User:</h2>
         <form action="http://localhost:3000/users" method="post">
           <input type="text" name="name" placeholder="name" />
           <input type="submit" value="Create user" />
@@ -74,7 +74,7 @@
         </form>
       </div>
     </div>
-    <h2>Review List:</h2>
+    <h2>List of Reviews from Various Places across Japan:</h2>
     <div class="review-list"></div>
     <footer>
       <a href="places.html">Places</a>
