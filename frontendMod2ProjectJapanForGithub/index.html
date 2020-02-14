@@ -4,114 +4,139 @@
     <meta charset="UTF-8" />
     <title>Visiting Japan</title>
     <link rel="stylesheet" href="app.css" />
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1 class="header">
-        <img src="https://www.sushifork.com/wp-content/uploads/2019/05/tulsa-sushi-restaurant-1.jpg" class="dl"alt="HTML Letters" width="140" height="80">
-        Visting Japan    
+        <img
+          src="https://www.sushifork.com/wp-content/uploads/2019/05/tulsa-sushi-restaurant-1.jpg"
+          class="dl"
+          alt="HTML Letters"
+          width="140"
+          height="80"
+        />
+        Visiting Japan
       </h1>
     </header>
-    <!-- Sidebar -->
-<div class="side-bar" style="width:15%">
-  <h3 class="w3-bar-item">Ah Decisions, Decisions</h3>
-  <h3>Search By City</h3>
-  <a href="http://localhost:3001/location.html?location=Tokyo" class="w3-bar-item w3-button">Tokyo</a>
-  <br><a href="http://localhost:3001/location.html?location=Kyoto" class="w3-bar-item w3-button">Kyoto</a>
-  <br><a href="http://localhost:3001/location.html?location=Osaka" class="w3-bar-item w3-button">Osaka</a>
-  <br><a href="http://localhost:3001/location.html?location=Fukuoka" class="w3-bar-item w3-button">Fukuoka</a>
-  
-  <h3>Search By Price</h3>
-  <a href="http://localhost:3001/price.html?price=0" class="w3-bar-item w3-button">Free</a>
-  <br><a href="http://localhost:3001/price.html?price=1" class="w3-bar-item w3-button">Cheap</a>
-  <br><a href="http://localhost:3001/price.html?price=2" class="w3-bar-item w3-button">Medium</a>
-  <br><a href="http://localhost:3001/price.html?price=3" class="w3-bar-item w3-button">Expensive</a>
+    <main>
+      <aside class="side-bar" style="width:15%">
+        <h3 class="w3-bar-item">Ah Decisions, Decisions</h3>
+        <h3>Search By City</h3>
+        <a
+          href="http://localhost:3001/location.html?location=Tokyo"
+          class="w3-bar-item w3-button"
+        >
+          Tokyo
+        </a>
+        <br /><a
+          href="http://localhost:3001/location.html?location=Kyoto"
+          class="w3-bar-item w3-button"
+          >Kyoto</a
+        >
+        <br /><a
+          href="http://localhost:3001/location.html?location=Osaka"
+          class="w3-bar-item w3-button"
+          >Osaka</a
+        >
+        <br /><a
+          href="http://localhost:3001/location.html?location=Fukuoka"
+          class="w3-bar-item w3-button"
+          >Fukuoka</a
+        >
 
-  <h3>Search By Catagory</h3>
-  <a href="http://localhost:3001/category.html?category=restaurant" class="w3-bar-item w3-button">Restaurant</a>
-  <a href="http://localhost:3001/category.html?category=attraction" class="w3-bar-item w3-button">Attraction</a>
-</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-<div style="margin-left:23%" top:50px;>
+        <h3>Search By Price</h3>
+        <a
+          href="http://localhost:3001/price.html?price=0"
+          class="w3-bar-item w3-button"
+          >Free</a
+        >
+        <br /><a
+          href="http://localhost:3001/price.html?price=1"
+          class="w3-bar-item w3-button"
+          >Cheap</a
+        >
+        <br /><a
+          href="http://localhost:3001/price.html?price=2"
+          class="w3-bar-item w3-button"
+          >Medium</a
+        >
+        <br /><a
+          href="http://localhost:3001/price.html?price=3"
+          class="w3-bar-item w3-button"
+          >Expensive</a
+        >
 
-<!-- <div class="w3-container w3-teal">
-  <h1>My Page</h1>
-</div>
-    <nav class="nav-bar">
-      <div class="city-filter">
-        Search By City: <a href="location.html?location=Tokyo&price=0">Tokyo</a>
-        <a href="location.html?location=Kyoto">Kyoto</a>
-        <a href="location.html?location=Osaka">Osaka</a>
-        <a href="location.html?location=Fukuoka">Fukuoka</a>
-      </div> -->
-      <!-- <div class="price-filter">
-        Search By Price: <a href="price.html?price=0">Free</a>
-        <a href="price.html?price=1">Cheap</a>
-        <a href="price.html?price=2">Medium</a>
-        <a href="price.html?price=3">Expensive</a>
-      </div>
-      <div class="category-filter">
-        Search By Category:
-        <a href="category.html?category=restaurant">Restaurant</a>
-        <a href="category.html?category=attraction">Attraction</a>
-      </div>
-    </nav> -->
-    <div class="form-container">
-      <div class="review-form">
-        <h2>Leave a Review!</h2>
-        <form action="http://localhost:3000/reviews" method="post">
-          <select class="user-select" name="user">
-            <!-- <option value="1">New User</option> -->
-          </select>
-          <select class="place-select" name="place">
-            <!-- <option value="1">Bar BESO</option> -->
-          </select>
-          <input
-            type="number"
-            name="rating"
-            placeholder="pick 1-5 stars"
-            value=""
-          />
-          <input
-            type="text"
-            name="description"
-            placeholder="your review details"
-          />
-          <input type="submit" value="Submit your review" />
-        </form>
-      </div>
-      <div class="user-form">
-        <h2>Create a User:</h2>
-        <form action="http://localhost:3000/users" method="post">
-          <input type="text" name="name" placeholder="name" />
-          <input type="submit" value="Create user" />
-        </form>
-      </div>
-      <div class="search-form">
-        <h2>Search Form:</h2>
-        <form action="http://localhost:3000/places" method="GET">
-          <select class="place-2nd-select" name="name">
-            <!-- <option value="1">Place ie Bar BESO</option> -->
-          </select>
-          <input
-            type="text"
-            name="category"
-            placeholder="attraction, restaurant, bar?"
-          />
-          <input type="submit" value="Search" />
-        </form>
-      </div>
-    </div>
-    <h2>List of Reviews from Various Places across Japan:</h2>
-    <div class="review-list"></div>
+        <h3>Search By Catagory</h3>
+        <a
+          href="http://localhost:3001/category.html?category=restaurant"
+          class="w3-bar-item w3-button"
+          >Restaurant</a
+        >
+        <a
+          href="http://localhost:3001/category.html?category=attraction"
+          class="w3-bar-item w3-button"
+          >Attraction</a
+        >
+      </aside>
+      <section>
+        <div class="form-container">
+          <div class="review-form">
+            <h2>Leave a Review!</h2>
+            <form action="http://localhost:3000/reviews" method="post">
+              <select class="user-select" name="user">
+                <!-- <option value="1">New User</option> -->
+              </select>
+              <select class="place-select" name="place">
+                <!-- <option value="1">Bar BESO</option> -->
+              </select>
+              <input
+                type="number"
+                name="rating"
+                placeholder="pick 1-5 stars"
+                value=""
+              />
+              <input
+                type="text"
+                name="description"
+                placeholder="your review details"
+              />
+              <input type="submit" value="Submit your review" />
+            </form>
+          </div>
+          <div class="user-form">
+            <h2>Create a User:</h2>
+            <form action="http://localhost:3000/users" method="post">
+              <input type="text" name="name" placeholder="name" />
+              <input type="submit" value="Create user" />
+            </form>
+          </div>
+          <div class="search-form">
+            <h2>Search Form:</h2>
+            <form action="http://localhost:3000/places" method="GET">
+              <select class="place-2nd-select" name="name">
+                <!-- <option value="1">Place ie Bar BESO</option> -->
+              </select>
+              <input
+                type="text"
+                name="category"
+                placeholder="attraction, restaurant, bar?"
+              />
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+        </div>
+        <h2>List of Reviews from Various Places across Japan:</h2>
+        <div class="review-list"></div>
+      </section>
+    </main>
     <footer>
       <a href="places.html">Places</a>
       <a href="reviews.html">Reviews</a>
     </footer>
-    <!-- <img
-      src="https://lp-cms-production.imgix.net/2019-06/512d769cd0d5e56c238eb975d2325940-japan.jpeg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4"
-      alt="japan travel photo"
-    /> -->
     <script src="app.js"></script>
   </body>
 </html>
