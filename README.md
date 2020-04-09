@@ -1,12 +1,12 @@
 # frontendJapan
 
-Check out wonderful things to do in Japan’s most prominent cities
+Check out wonderful things to do in Japan’s most prominent cities.
 
-Hand seeded the data on the backend for display on the frontend
+Hand seeded the data on the backend for display on the frontend.
 
-Backend Rails app with Vanilla JS frontend
+Backend Rails app with Vanilla JS frontend.
 
-Developed a Rails API backend with endpoints for cities, categories and price points
+Developed a Rails API backend with endpoints for cities, categories and price points.
 
 Current Features:
 
