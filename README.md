@@ -1,5 +1,7 @@
 # frontendJapan
 
+![visitjapandemo](./visitjapandemo.gif)
+
 About this Project:
 
 This is a review platform created for the country of Japan. It allows you to look up reviews for various places ranging from bars, to restaurants, shopping malls, and other various attractions this country has to offer.
@@ -13,7 +15,5 @@ Reviews can range anywhere from 1-5 stars and you can even leave a description t
 If you are ever interested in updating a review about a place you visited, you just need to login like so, and click the update button, and it will allow you to update the rating or description regarding any of the places you've left a review about.
 
 If you messed up about what you were trying to say or just changed your mind about leaving a review, you can just delete that review as well and make or not make... a new one!
-
-![visitjapandemo](./visitjapandemo.gif)
 
 Enjoy!
